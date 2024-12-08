@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Form Filler",
+  "version": "1.0",
+  "description": "Preenche formulários automaticamente",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "1": "icon1.png",
+      "2": "icon2.png",
+      "3": "icon3.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
